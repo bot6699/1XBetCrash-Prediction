@@ -38,13 +38,13 @@ nn_reg = MLPRegressor(hidden_layer_sizes=(100,), max_iter=1000, random_state=123
 nn_reg.fit(train_X, train_y)
 
 # Create a Telegram bot object
-bot = telebot.TeleBot('5917307553:AAFD7RgRMF3supp-RdRhFkR9t-E9G-4NRLU')
+bot = telebot.TeleBot('6953244493:AAGAZDP4J866dHqavi9vSPRqeRsXkMlc7Lg')
 
 # Define the handler function for the '/predict' command
 @bot.message_handler(commands=['predict'])
 def handle_predict(message: Message):
     # Get the chat ID of the user who sent the message
-    chat_id = message.chat.id
+    chat_id = message.chat.id'-4196728509'
     
     # Use the trained models to predict the next 10 values of the multiplier
     for model in [linear_reg, tree_reg, forest_reg, nn_reg]:
